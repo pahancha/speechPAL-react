@@ -1,0 +1,15 @@
+.text-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .transcribed-text {
+    font-size: 18px;
+    color: #444;
+    text-align: center;
+    max-width: 80vw;
+    word-wrap: break-word;
+  }
+  
