@@ -1,10 +1,15 @@
-import React from 'react';
+import React ,{ useContext }from 'react';
 import './TranscribedText.css';
+import { TranscribedTextContext } from '../TranscribedTextContext';
 
-function TranscribedText(props) {
+
+function TranscribedText() {
+  const { transcribedText } = useContext(TranscribedTextContext);
+
+
   return (
     <div className="text-container">
-      <p className="transcribed-text">{props.text || 'Transcribed speech will display here.'}</p>
+      <p className="transcribed-text">{transcribedText || 'Here works.'}</p>
     </div>
   );
 }

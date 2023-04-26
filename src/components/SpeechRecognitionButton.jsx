@@ -1,16 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './SpeechRecognitionButton.css';
 import TranscribedText from './TranscribedText';
+import { TranscribedTextContext } from '../TranscribedTextContext';
 
 function SpeechRecognitionButton() {
   const [isRecording, setIsRecording] = useState(false);
-  const [transcribedText, setTranscribedText] = useState("");
+  // const [transcribedText, setTranscribedText] = useState("");
   const [transcribing, setTranscribing] = useState(false);
   const [transcribedTextLoaded, setTranscribedTextLoaded] = useState(false);
   // recording related
   const [audioStream, setAudioStream] = useState(null);
   const [recordedData, setRecordedData] = useState(null);
   const [mediaRecorder, setMediaRecorder] = useState(null);
+
+  // context api related
+  const { setTranscribedText } = useContext(TranscribedTextContext);
+
 
   const handleStartRecording = () => {
     setIsRecording(true);
@@ -63,6 +68,7 @@ function SpeechRecognitionButton() {
               // Handle transcribed text from Flask back-end
               console.log("Generated sentence: ", generatedSentence);
               console.log("Original speech: ", originalSpeech);
+              setTranscribedText(generatedSentence);
             })
             .catch((error) => {
               console.error("Error:", error);
@@ -72,6 +78,7 @@ function SpeechRecognitionButton() {
         mediaRecorder.stop();
       }
     }
+    setTranscribing(false)
   };
 
   return (
@@ -82,9 +89,6 @@ function SpeechRecognitionButton() {
       >
         {isRecording ? 'Stop' : 'Click here to speak'}
       </button>
-      {transcribing && <div>Transcribing...</div>}
-      {transcribedTextLoaded && <TranscribedText text={transcribedText} />}  
-      <div></div>
     </div>
   );
 }

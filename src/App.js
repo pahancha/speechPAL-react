@@ -1,14 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 import SpeechRecognitionButton from './components/SpeechRecognitionButton';
-import RecordingScreen from './screens/RecordingScreen';
+import TranscribedText from './components/TranscribedText';
+import { TranscribedTextProvider } from './TranscribedTextContext';
 
 function App() {
   return (
-    <div className="App">
-    {/* <SpeechRecognitionButton /> */}
-    <RecordingScreen />
-    </div>
+    <TranscribedTextProvider>
+      <div className="App">
+        <SpeechRecognitionButton />
+        <TranscribedText />
+      </div>
+    </TranscribedTextProvider>
   );
 }
 
