@@ -4,7 +4,9 @@ import TranscribedText from '../components/TranscribedText';
 import SelectClassButtons from '../components/SelectClassButtons';
 
 
+
 function RecordingScreen() {
+
 
   return (
     <div>
@@ -12,6 +14,7 @@ function RecordingScreen() {
       <SpeechRecognitionButton />
       <TranscribedText />
     </div>
+
   );
 }
 

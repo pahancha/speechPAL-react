@@ -1,50 +1,61 @@
 .sbc-select-class-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sbc-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background-color: rgb(245, 242, 242); 
+  border: none;
+  border-radius: 8px;
+  color: #000000;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  border: 0.5px solid black;
+}
+
+.sbc-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-3px);
+  color: #fff;
+}
+
+.sbc-selected {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+.sbc-all {
+  background-color: rgba(255, 0, 0, 0.894); 
+}
+
+.sbc-all.sbc-selected {
+  background-color: rgb(255, 0, 0); 
+}
+
+.sbc-selected-text {
+  font-size: 0.6rem;
+  color: #fff;
+  margin-top: 0.4rem;
+}
+
+@media screen and (max-width: 600px) {
   .sbc-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
-    font-weight: bold;
-    background-color: rgba(0, 0, 0, 0.3); /* Updated default color to be lighter */
-    border: none;
-    border-radius: 8px;
-    color: #4c4c4c;
-    text-transform: uppercase;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.3s;
-    cursor: pointer;
+      font-size: 0.8rem;
   }
-  
-  .sbc-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    transform: translateY(-3px);
-    color: #fff;
-  }
-  
-  .sbc-selected {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-  }
-  
-  .sbc-all {
-    background-color: rgba(255, 0, 0, 0.6); /* Updated default color to be lighter */
-  }
-  
-  .sbc-all.sbc-selected {
-    background-color: rgba(255, 0, 0, 0.8); /* Updated color to be brighter when selected */
-  }
-  
-  .sbc-selected-text {
-    font-size: 0.6rem;
-    color: #fff;
-    margin-top: 0.4rem;
-  }
-  
+}

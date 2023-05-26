@@ -13,12 +13,16 @@ const Header = () => {
       </div>
       <nav className="hc-navbar">
         <ul className="hc-nav-list">
+        <li className="hc-nav-item"><Link to="/">Home</Link></li>
+          <li className="hc-nav-item"><Link to="/how-to-use">How to Use?</Link></li>
           <li className="hc-nav-item"><Link to="/web-app">Web Application</Link></li>
           <li className="hc-nav-item"><Link to="/mobile-app">Mobile Application</Link></li>
-          <li className="hc-nav-item"><Link to="/how-to-use">How to Use?</Link></li>
           <li className="hc-nav-item"><Link to="/read-paper">Read Paper</Link></li>
         </ul>
       </nav>
+      <div className="login-button-container">
+        <Link to="/login" className="login-button">Login</Link>
+      </div>
     </header>
   );
 };

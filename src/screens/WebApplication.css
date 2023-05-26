@@ -35,4 +35,10 @@
     color: #303030;
     border-bottom: 2px solid #303030;
   }
+
+  .wa-instruction-text {
+    text-align: center;
+    padding: 1rem;
+
+  }
   
