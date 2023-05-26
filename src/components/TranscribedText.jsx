@@ -9,7 +9,7 @@ function TranscribedText() {
 
   return (
     <div className="text-container">
-      <p className="transcribed-text">{transcribedText || 'Here works.'}</p>
+      <p className="transcribed-text">{transcribedText || 'Transcribed speech will display here.'}</p>
     </div>
   );
 }

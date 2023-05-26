@@ -1,0 +1,77 @@
+.hc-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hc-logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hc-logo {
+    width: 120px;
+    height: auto;
+    margin-right: 1rem;
+  }
+  
+  .hc-navbar {
+    display: flex;
+  }
+  
+  .hc-nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .hc-nav-item {
+    margin-left: 1.5rem;
+  }
+  
+  .hc-nav-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .hc-nav-item a:hover {
+    color: #0077cc;
+  }
+  
+  /* Add these rules to adjust the hc-header for smaller screens */
+  @media screen and (max-width: 768px) {
+    .hc-header {
+      padding: 0.5rem;
+    }
+  }
+  
+  /* Add these rules to adjust the hc-logo for smaller screens */
+  @media screen and (max-width: 768px) {
+    .hc-logo {
+      width: 100px;
+      margin-right: 0.5rem;
+    }
+  }
+  
+  /* Add these rules to adjust the hc-nav-list for smaller screens */
+  @media screen and (max-width: 768px) {
+    .hc-nav-list {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+    .hc-nav-item {
+      margin: 0.5rem 0;
+    }
+    .hc-nav-item a {
+      font-size: 1rem;
+    }
+  }

@@ -1,0 +1,51 @@
+.sbc-select-class-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .sbc-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.3); /* Updated default color to be lighter */
+    border: none;
+    border-radius: 8px;
+    color: #120432;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .sbc-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-3px);
+    color: #fff;
+  }
+  
+  .sbc-selected {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+  }
+  
+  .sbc-all {
+    background-color: rgba(255, 0, 0, 0.6); /* Updated default color to be lighter */
+  }
+  
+  .sbc-all.sbc-selected {
+    background-color: rgba(255, 0, 0, 0.8); /* Updated color to be brighter when selected */
+  }
+  
+  .sbc-selected-text {
+    font-size: 0.6rem;
+    color: #fff;
+    margin-top: 0.4rem;
+  }
+  

@@ -1,0 +1,38 @@
+.tab-view-container {
+    font-family: Arial, sans-serif;
+  }
+  
+  .tab-list {
+    display: flex;
+    justify-content: center; 
+    background-color: #ffffff;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #000000;
+    transition: color 0.3s;
+    list-style: none;
+    border: none;
+    background: none;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .tab:hover {
+    color: #0077cc;
+  }
+  
+  .react-tabs__tab--selected {
+    color: #303030;
+    border-bottom: 2px solid #303030;
+  }
+  

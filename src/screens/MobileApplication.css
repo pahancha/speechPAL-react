@@ -1,0 +1,18 @@
+.mobile-application {
+    text-align: center;
+  }
+  
+  .download-apk {
+    width: 200px;
+    height: auto;
+    margin-top: 1rem;
+    cursor: pointer;
+    border: solid;
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .clickonH{
+    padding: 20px;
+  }
+  

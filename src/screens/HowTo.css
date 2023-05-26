@@ -1,0 +1,16 @@
+.how-to {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .how-to-section {
+    margin-bottom: 2rem;
+  }
+  
+  .how-to ol {
+    list-style-position: inside;
+    text-align: left;
+    max-width: 600px;
+    margin: 1rem auto;
+  }
+  
