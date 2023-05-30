@@ -1,15 +1,33 @@
-import React ,{ useContext }from 'react';
+import React, { useContext } from 'react';
 import './TranscribedText.css';
 import { TranscribedTextContext } from '../TranscribedTextContext';
 
-
 function TranscribedText() {
-  const { transcribedText } = useContext(TranscribedTextContext);
+  const { transcribedText, setTranscribedText } = useContext(TranscribedTextContext);
 
+  const handleSentenceChange = (index, event) => {
+    const newSentences = [...transcribedText];
+    newSentences[index] = event.target.value.slice(0, 100);    
+    setTranscribedText(newSentences);
+  };
 
   return (
     <div className="text-container">
-      <p className="transcribed-text">{transcribedText || 'Transcribed speech will display here.'}</p>
+      {transcribedText.length > 0 ? (
+        <ul>
+          {transcribedText.map((sentence, index) => (
+            <li key={index}>
+              <textarea
+                className="transcribed-text editable"
+                value={sentence}
+                onChange={(event) => handleSentenceChange(index, event)}
+                maxLength={100}               />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="transcribed-text"> <b>Transcribed speech will display here.</b> You <b>can edit</b> them to communicate exactly what you intended.</p>
+      )}
     </div>
   );
 }

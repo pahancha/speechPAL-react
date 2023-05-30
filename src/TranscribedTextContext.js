@@ -6,7 +6,7 @@ export const TranscribedTextContext = createContext({
 });
 
 export const TranscribedTextProvider = ({ children }) => {
-  const [transcribedText, setTranscribedText] = useState('');
+  const [transcribedText, setTranscribedText] = useState([]);
 
   return (
     <TranscribedTextContext.Provider value={{ transcribedText, setTranscribedText }}>

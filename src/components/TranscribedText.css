@@ -1,15 +1,39 @@
 .text-container {
-    margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .transcribed-text {
-    font-size: 18px;
-    color: #444;
-    text-align: center;
-    max-width: 80vw;
-    word-wrap: break-word;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.transcribed-text {
+  font-size: 18px;
+  color: #444;
+  text-align: center;
+  max-width: 80vw;
+  word-wrap: break-word;
+}
+
+.text-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.text-container li {
+  margin-bottom: 10px; 
+}
+
+.transcribed-text.editable {
+  width: 50vw;
+  min-height: 35px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: all 0.2s;
+}
+
+.transcribed-text.editable:hover {
+  transform: scale(1.05);
+  border-color: #888;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}

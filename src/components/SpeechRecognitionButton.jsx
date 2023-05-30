@@ -60,16 +60,11 @@ function SpeechRecognitionButton() {
           })
             .then((response) => response.json())
             .then((data) => {
-              // Handle transcribed text from Flask back-end
               console.log(data);
-              const generatedSentence = data.results[0].generatedSentece;
-              const originalSpeech = data.results[0].originalSpeech;
-
-              // Handle transcribed text from Flask back-end
-              console.log("Generated sentence: ", generatedSentence);
-              console.log("Original speech: ", originalSpeech);
-              setTranscribedText(generatedSentence);
+              const generatedSentences = data.results.map((result) => result.generatedSentence);
+              setTranscribedText(generatedSentences);
             })
+            
             .catch((error) => {
               console.error("Error:", error);
             });
