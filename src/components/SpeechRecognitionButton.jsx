@@ -3,7 +3,7 @@ import './SpeechRecognitionButton.css';
 import TranscribedText from './TranscribedText';
 import { TranscribedTextContext } from '../TranscribedTextContext';
 
-function SpeechRecognitionButton() {
+function SpeechRecognitionButton(props) {
   const [isRecording, setIsRecording] = useState(false);
   // const [transcribedText, setTranscribedText] = useState("");
   const [transcribing, setTranscribing] = useState(false);
@@ -53,8 +53,10 @@ function SpeechRecognitionButton() {
           const blob = e.data;
           const formData = new FormData();
           formData.append("audio", blob, "recording.wav");
+          formData.append("choice", props.selectedContext);
 
-          fetch("http://127.0.0.1:5000/generateASR", {
+
+          fetch("http://127.0.0.1:5000/generate-with-choice", {
             method: "POST",
             body: formData,
           })

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import SpeechRecognitionButton from '../components/SpeechRecognitionButton';
 import TranscribedText from '../components/TranscribedText';
 import SelectClassButtons from '../components/SelectClassButtons';
@@ -6,12 +6,13 @@ import SelectClassButtons from '../components/SelectClassButtons';
 
 
 function RecordingScreen() {
+  const [selectedContext, setSelectedContext] = useState("general:");
 
 
   return (
     <div>
-      <SelectClassButtons />
-      <SpeechRecognitionButton />
+      <SelectClassButtons selectedContext={selectedContext} setSelectedContext = {setSelectedContext}/>
+      <SpeechRecognitionButton selectedContext={selectedContext}/>
       <TranscribedText />
     </div>
 

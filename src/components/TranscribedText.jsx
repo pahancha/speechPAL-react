@@ -21,7 +21,8 @@ function TranscribedText() {
                 className="transcribed-text editable"
                 value={sentence}
                 onChange={(event) => handleSentenceChange(index, event)}
-                maxLength={100}               />
+                maxLength={100}               
+                />
             </li>
           ))}
         </ul>

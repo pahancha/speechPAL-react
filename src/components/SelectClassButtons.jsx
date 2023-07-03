@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './SelectClassButtons.css';
 
-function SelectClassButtons() {
-  const [selectedButton, setSelectedButton] = useState(null);
+function SelectClassButtons({selectedContext, setSelectedContext}) {
+  const [selectedButton, setSelectedButton] = useState("null");
   const [context, setContext] = useState('');
 
   useEffect(() => {
@@ -11,7 +11,7 @@ function SelectClassButtons() {
 
   const handleButtonClick = (buttonName) => {
     setSelectedButton(buttonName);
-    setContext(buttonName);
+    setSelectedContext(buttonName+":");
   };
 
   const buttons = ['need', 'inform', 'preference', 'question', 'general', 'all'];
